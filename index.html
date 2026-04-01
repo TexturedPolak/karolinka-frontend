@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Karolinka - zaszyfruj, odszyfruj</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.3.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
+    <style>
+      .ui {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Karolinka</h1>
+    <p>Zaszyfruj wiadomość szyfrem lub odszyfruj szyfr Karolinka od ręki ;)</p>
+    <p class="loading">Ładowanie...</p>
+    <p class="ui">Wypełni poniższe pola (niektóre mogą być już uzupełnione domyślnie) i naciśnij odpowiedni przycisk.</p>
+    <p>Lista błędów które mogą wyskoczyć: <a href="https://karolinka.readthedocs.io/pl/0.4.0/karolinka/bugi.html">https://karolinka.readthedocs.io/pl/0.4.0/karolinka/bugi.html</a></p>
+    <label for="slowo-klucz" class="ui">Słowo klucz: </label>
+    <input type="text" class="ui" style="field-sizing: content;" id="slowo-klucz" name="slowo-klucz" value="KAROLINKA"><br>
+    <label for="alfabet" class="ui">Alfabet: </label>
+    <input type="text" class="ui" style="field-sizing: content;" id="alfabet" name="slowo-klucz" value="ABCDEFGHIJKLMNOPRSTUWYZ"><br>
+    <label for="wiadomosc" class="ui">Wiadomość: </label><br>
+    <textarea rows=10 id="wiadomosc" name="wiadomosc" placeholder="Tajna wiadomość..." style="-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70%;" class="ui"></textarea><br>
+    <button id="zaszyfruj" class="ui">Zaszyfruj</button>
+    <button id="odszyfruj" class="ui">Odszyfruj</button><br>
+    <label for="wynik" class="ui">Wynik: </label><br>
+    <textarea readonly id="wynik" name="wynik" rows=10 placeholder="Tajna wiadomość..." style="-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70%;" class="ui"></textarea>
+    <script type="py" src="./main.py" config="./pyscript.json"></script>
+  </body>
+</html>
